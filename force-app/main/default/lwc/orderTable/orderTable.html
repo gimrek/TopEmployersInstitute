@@ -1,0 +1,23 @@
+<template>
+    <lightning-card  title="Order List">
+        <lightning-datatable
+                key-field="id"
+                hide-checkbox-column
+                show-row-number-column
+                data={orderData}
+                columns={orderColumns}
+                onrowaction={deleteProducts}>
+        </lightning-datatable>
+        
+        <div class="slds-p-top_small slds-p-right_x-small slds-text-title_caps">
+            <div class="slds-text-align_right"><b>TOTALS</b></div>
+            <div class="slds-text-align_right slds-p-top_small">Order Price : {totalPrice} €</div>
+            <div class="slds-p-top_small">
+                <div class="slds-text-align_right slds-p-top_x-small">A-Family Product Price : {aFamilyTotalPrice} €</div>
+                <div class="slds-text-align_right slds-p-top_x-small">B-Family Product Price : {bFamilyTotalPrice} €</div>
+                <div class="slds-text-align_right slds-p-top_x-small">C-Family Product Price : {cFamilyTotalPrice} €</div>
+                <div class="slds-text-align_right slds-p-top_x-small">D-Family Product Price : {dFamilyTotalPrice} €</div>
+            </div>
+        </div>
+    </lightning-card>
+</template>

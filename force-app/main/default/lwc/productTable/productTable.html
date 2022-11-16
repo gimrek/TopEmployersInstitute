@@ -1,0 +1,14 @@
+<template>
+    <lightning-card  title="All Active Products">
+        <lightning-datatable
+            key-field="Id"
+            data={productData}
+            columns={productColumns}
+            onrowselection={handleRowSelection}>
+        </lightning-datatable>
+        <div class="slds-p-top_small slds-p-left_x-small"> 
+            <lightning-button variant="brand" label="Add to Order" onclick={handleAddToOrder} icon-name="utility:add" class="slds-m-right_x-small">
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>
